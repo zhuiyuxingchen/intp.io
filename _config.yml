@@ -2,15 +2,15 @@
 title: "我的精品文章展示站"
 description: "精选技术文章与思考"
 baseurl: "" 
-url: "https://你的用户名.github.io"
+url: "https://zhuiyuxingchen.github.io"
 
 # 主题设置
 theme: minima
 
 # 作者信息
 author:
-  name: "您的名字"
-  email: "您的邮箱"
+  name: "zhuiyuxingchen"
+  email: "16645125216@163.com"
 
 # 插件
 plugins:
@@ -25,8 +25,7 @@ permalink: pretty
 comments: false
 
 # 社交媒体链接（可选）
-github_username: 您的GitHub用户名
-twitter_username: 您的Twitter用户名（可选）
+github_username: zhuiyuxingchen
 
 # 自定义变量
 show_excerpts: true
