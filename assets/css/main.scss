@@ -463,3 +463,73 @@ body {
         border-top-color: #4a5568;
     }
 }
+// 文章流修复样式
+.feed-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.article-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 100vh;
+}
+
+.load-more-container {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.no-more-articles {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 1rem 0;
+    
+    p {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+}
+
+// 确保加载指示器居中
+.loading-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: #666;
+    font-size: 0.9rem;
+    padding: 1rem;
+    
+    .spinner {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid $secondary-color;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+// 响应式调整
+@media screen and (max-width: 768px) {
+    .feed-container {
+        padding: 0 0.5rem;
+    }
+    
+    .article-card {
+        margin: 0 0.25rem;
+    }
+}
