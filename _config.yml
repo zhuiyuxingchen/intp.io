@@ -35,3 +35,9 @@ header_pages:
   - about.md
   - archives.md
 # 如果你的主题支持，这会自动在顶部导航生成链接
+# 在 _config.yml 中添加：
+header_pages:
+  - index.md
+  - archives.md    # 作为"分类"页面
+  - tags.md        # 标签页面
+  - about.md       # 可以作为"登录"或"关于"
