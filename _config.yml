@@ -29,3 +29,9 @@ github_username: zhuiyuxingchen
 # 自定义变量
 show_excerpts: true
 future: false
+
+# 添加到 _config.yml 中
+header_pages:
+  - about.md
+  - archives.md
+# 如果你的主题支持，这会自动在顶部导航生成链接
