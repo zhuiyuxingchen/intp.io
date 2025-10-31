@@ -247,3 +247,219 @@ body {
         }
     }
 }
+// 文章流样式
+.feed-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.article-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.article-card {
+    background: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    
+    &:hover {
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        transform: translateY(-2px);
+    }
+}
+
+.article-header {
+    margin-bottom: 1rem;
+    
+    .article-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $primary-color;
+        margin: 0 0 0.5rem 0;
+        line-height: 1.4;
+        
+        .article-icon {
+            margin-right: 0.5rem;
+            font-size: 1.1em;
+        }
+    }
+    
+    .article-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 0.9rem;
+        color: #666;
+        
+        .article-author {
+            font-weight: 500;
+            color: $primary-color;
+        }
+        
+        .article-date {
+            color: #888;
+        }
+    }
+}
+
+.article-excerpt {
+    margin-bottom: 1.25rem;
+    
+    p {
+        margin: 0;
+        color: #444;
+        line-height: 1.6;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+    
+    .article-categories {
+        display: flex;
+        gap: 0.5rem;
+        
+        .category-tag {
+            background: rgba($secondary-color, 0.1);
+            color: $secondary-color;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+    }
+    
+    .read-more-btn {
+        background: $secondary-color;
+        color: white;
+        padding: 0.5rem 1.25rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background: $hover-color;
+            transform: translateY(-1px);
+        }
+    }
+}
+
+// 加载更多区域
+.load-more-container {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.load-more-btn {
+    background: linear-gradient(135deg, $secondary-color, $hover-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba($secondary-color, 0.3);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.loading-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: #666;
+    font-size: 0.9rem;
+    
+    .spinner {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid $secondary-color;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.no-more-articles {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 2rem;
+}
+
+// 响应式设计
+@media screen and (max-width: 768px) {
+    .feed-container {
+        padding: 0 0.5rem;
+    }
+    
+    .article-card {
+        padding: 1.25rem;
+        margin: 0 0.5rem;
+    }
+    
+    .article-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+        
+        .read-more-btn {
+            align-self: flex-end;
+        }
+    }
+    
+    .article-title {
+        font-size: 1.2rem !important;
+    }
+}
+
+// 深色模式支持（可选）
+@media (prefers-color-scheme: dark) {
+    .article-card {
+        background: #2d3748;
+        border-color: #4a5568;
+        color: #e2e8f0;
+    }
+    
+    .article-title {
+        color: #e2e8f0;
+    }
+    
+    .article-excerpt p {
+        color: #cbd5e0;
+    }
+    
+    .article-footer {
+        border-top-color: #4a5568;
+    }
+}
