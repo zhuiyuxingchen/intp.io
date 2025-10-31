@@ -5,7 +5,7 @@ baseurl: ""
 url: "https://zhuiyuxingchen.github.io"
 
 # 主题设置
-theme: jkey-theme-cayman
+theme: jekyll-theme-cayman
 
 # 作者信息
 author:
