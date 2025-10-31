@@ -1,7 +1,7 @@
 # _config.yml
 title: "我的精品文章展示站"
 description: "精选技术文章与思考"
-baseurl: "" 
+baseurl: "/intp.io" 
 url: "https://zhuiyuxingchen.github.io"
 
 # 主题设置
