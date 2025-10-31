@@ -1,0 +1,44 @@
+---
+---
+
+// 自定义样式 - 增大精选文章字体
+.featured-posts {
+  font-size: 1.3em;
+  line-height: 1.6;
+}
+
+.featured-posts h2 {
+  font-size: 2em;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.featured-posts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.featured-posts li {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.featured-posts li:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.featured-posts a {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.featured-posts a:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
